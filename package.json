@@ -40,6 +40,8 @@
       "npx eslint --ext .js,.tsx,.ts . --fix",
       "prettier --write"
     ],
-    "*.css": "prettier --write"
+    "*.css": "prettier --write",
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
