@@ -12,12 +12,12 @@ export function MenuToggler({ isOpen, setIsOpen }: MenuTogglerProps) {
   return (
     <>
       {isOpen ? (
-        <button onClick={closeMenu}>
-          <IconX />
+        <button onClick={closeMenu} aria-expanded={isOpen}>
+          <IconX aria-hidden="true" focusable="false" />
         </button>
       ) : (
-        <button onClick={openMenu}>
-          <IconMenu2 />
+        <button onClick={openMenu} aria-expanded={isOpen}>
+          <IconMenu2 aria-hidden="true" focusable="false" />
         </button>
       )}
     </>
