@@ -1,16 +1,18 @@
-import Link from "next/link";
+"use client";
+
+import { useState } from "react";
+import { MenuToggler } from "../MenuToggler/MenuToggler";
+import { NavBar } from "../NavBar/NavBar";
+import { Logo } from "../Logo/Logo";
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header>
-      <a href="/" className="font-font-ephesis">
-        Pavel Alloyarov
-      </a>
-      <nav>
-        <Link href={"/about"}>О себе</Link>
-        <Link href={"/projects"}>Проекты</Link>
-        <Link href={"/articles"}>Статьи</Link>
-      </nav>
+      <Logo />
+      <MenuToggler isOpen={isOpen} setIsOpen={setIsOpen} />
+      <NavBar />
     </header>
   );
 }
