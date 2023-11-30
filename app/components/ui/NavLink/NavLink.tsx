@@ -1,16 +1,23 @@
 import Link, { LinkProps } from "next/link";
-import { HTMLProps, ReactNode } from "react";
+import { ComponentPropsWithoutRef, ReactNode } from "react";
+
+interface NavLinkProps {
+  title: string;
+  className?: string;
+  props?: ComponentPropsWithoutRef<"a">;
+}
 
 export function NavLink({
   as,
-  children,
   href,
   replace,
   scroll,
   shallow,
   passHref,
-  ...rest
-}: LinkProps & HTMLProps<HTMLAnchorElement>): ReactNode {
+  title,
+  props,
+  className,
+}: LinkProps & NavLinkProps): ReactNode {
   return (
     <Link
       as={as}
@@ -19,9 +26,10 @@ export function NavLink({
       replace={replace}
       scroll={scroll}
       shallow={shallow}
-      legacyBehavior
+      className={className}
+      {...props}
     >
-      <a {...rest}>{children}</a>
+      {title}
     </Link>
   );
 }
