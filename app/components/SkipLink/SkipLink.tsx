@@ -2,10 +2,7 @@ import Link from "next/link";
 
 export function SkipLink() {
   return (
-    <Link
-      href={"#maincontent"}
-      className="sr-only focus:not-sr-only active:not-sr-only"
-    >
+    <Link href={"#maincontent"} className="focus: sr-only">
       Skip to the main content
     </Link>
   );
