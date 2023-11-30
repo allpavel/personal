@@ -2,8 +2,8 @@ import Link, { LinkProps } from "next/link";
 import { ComponentPropsWithoutRef, ReactNode } from "react";
 
 interface NavLinkProps {
-  title: string;
   className?: string;
+  children?: ReactNode;
   props?: ComponentPropsWithoutRef<"a">;
 }
 
@@ -14,9 +14,9 @@ export function NavLink({
   scroll,
   shallow,
   passHref,
-  title,
   props,
   className,
+  children,
 }: LinkProps & NavLinkProps): ReactNode {
   return (
     <Link
@@ -26,10 +26,10 @@ export function NavLink({
       replace={replace}
       scroll={scroll}
       shallow={shallow}
-      className={className}
+      className={`text-center${className ? " " + className : ""}`}
       {...props}
     >
-      {title}
+      {children}
     </Link>
   );
 }

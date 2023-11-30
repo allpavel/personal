@@ -11,6 +11,9 @@ const config: Config = {
       fontFamily: {
         "font-ephesis": "var(--ephesis)",
       },
+      transitionProperty: {
+        visible: "visibility, opacity",
+      },
     },
   },
   plugins: [],

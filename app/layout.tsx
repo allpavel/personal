@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={ephesis.variable}>
-      <body className="mx-auto max-w-6xl bg-zinc-50 p-4">
+      <body className="mx-auto flex max-w-6xl flex-col bg-zinc-50 p-4">
         <Header />
         {children}
       </body>
