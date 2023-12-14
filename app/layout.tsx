@@ -1,7 +1,6 @@
 import Header from "./components/Header/Header";
 import { Ephesis } from "next/font/google";
 import "./globals.css";
-import { SkipLink } from "./components/SkipLink/SkipLink";
 
 const ephesis = Ephesis({
   subsets: ["latin"],
@@ -17,8 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={ephesis.variable}>
-      <body className="mx-auto flex max-w-6xl flex-col bg-zinc-50 p-4">
-        <SkipLink />
+      <body className="mx-auto flex max-w-6xl flex-col bg-zinc-50 p-4 text-dark-grey">
         <Header />
         {children}
       </body>

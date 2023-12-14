@@ -14,6 +14,9 @@ const config: Config = {
       transitionProperty: {
         visible: "visibility, opacity",
       },
+      colors: {
+        "dark-grey": "#373D3F",
+      },
     },
   },
   plugins: [],
