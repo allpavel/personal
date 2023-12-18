@@ -13,6 +13,7 @@ const config: Config = {
       },
       transitionProperty: {
         visible: "visibility, opacity",
+        svg: "color, transform",
       },
       colors: {
         "dark-grey": "#373D3F",

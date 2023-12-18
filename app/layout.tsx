@@ -1,6 +1,7 @@
 import Header from "./components/Header/Header";
 import { Ephesis } from "next/font/google";
 import "./globals.css";
+import Footer from "./components/Footer/Footer";
 
 const ephesis = Ephesis({
   subsets: ["latin"],
@@ -16,9 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={ephesis.variable}>
-      <body className="mx-auto flex max-w-6xl flex-col bg-zinc-50 p-4 text-dark-grey">
+      <body className="mx-auto flex min-h-screen max-w-6xl flex-col bg-zinc-50 p-4 text-dark-grey">
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
