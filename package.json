@@ -23,7 +23,7 @@
     "@typescript-eslint/parser": "^6.12.0",
     "autoprefixer": "^10.0.1",
     "eslint": "^8.54.0",
-    "eslint-config-next": "14.0.3",
+    "eslint-config-next": "14.2.5",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-jsx-a11y": "^6.9.0",
     "eslint-plugin-react-hooks": "^4.6.0",
